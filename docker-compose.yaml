@@ -1,0 +1,10 @@
+services:
+  bottelegram:
+    container_name: bot-shavira-undiksha
+    build: .
+    command: python main.py
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - .:/app
